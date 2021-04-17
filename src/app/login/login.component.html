@@ -1,0 +1,27 @@
+
+<ActionBar title="Login" style="background-color:#e7eef0 ;color: black;" >
+	<NavigationButton ></NavigationButton>
+</ActionBar>
+	<GridLayout backgroundColor="#CCCCCC" columns="*" rows="*,*" >
+	  <ScrollView>
+		  <StackLayout margin="10" verticalAlignment="center" >
+			  <StackLayout class="form" padding="15" backgroundColor="#FFFFFF" #form>
+				  <StackLayout class="input-field">
+					  <Label text="Username" class="label font-weight-bold m-b-5" ></Label>
+					  <TextField #username class="input" autocorrect="false" autocapitalizationType="none"></TextField>
+					  <StackLayout class="hr-light"></StackLayout>
+				  </StackLayout>
+				  <StackLayout class="input-field">
+					  <Label text="Password" class="label font-weight-bold m-b-5"></Label>
+					  <TextField #password secure="true" class="input" autocorrect="false" autocapitalizationType="none"></TextField>
+					  <StackLayout class="hr-light"></StackLayout>
+				  </StackLayout>
+				  <Button style="background-color:#2859d5; color: white;"  text="Login" (tap)="onLoginButtonClicked(username.text, password.text)" ></Button>
+				  <!-- <Button style="background-color: #04C7FD; color: white;"  text="Logout" (tap)="logout()" ></Button> -->
+
+				  <button style="color: blue; text-decoration:underline" [nsRouterLink]="['/registration']" text="Register" class="text-center footnote"></button>
+			  </StackLayout>
+		  </StackLayout>
+	  </ScrollView>
+
+  </GridLayout>

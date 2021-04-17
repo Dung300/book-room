@@ -1,0 +1,48 @@
+<ActionBar style="background-color:#e7eef0 ;color: black;" >
+    <Label style="color: black;" text="Registration"></Label>
+    <NavigationButton ></NavigationButton>
+
+</ActionBar>
+<GridLayout backgroundColor="#CCCCCC" columns="*" rows="*" >
+    <ScrollView>
+        <StackLayout margin="10" verticalAlignment="top">
+            <StackLayout class="form" padding="15" backgroundColor="#FFFFFF" [formGroup]="registrationForm" method="POST"  (ngSubmit)="createAccount()">
+                <StackLayout class="input-field">
+                    <Label text="Name" class="label font-weight-bold m-b-5" ></Label>
+                    <TextField class="input" formControlName="name"  name="name" required></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Username" class="label font-weight-bold m-b-5" ></Label>
+                    <TextField class="input" formControlName="username"  name="name" required></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Email" class="label font-weight-bold m-b-5" ></Label>
+                    <TextField class="input" hint="@gmail.com" keyboardType="email" formControlName="email" required></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Password" class="label font-weight-bold m-b-5"></Label>
+                    <TextField secure="false" class="input" formControlName="password" required></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label text="Phone" class="label font-weight-bold m-b-5" ></Label>
+                    <TextField class="input"required keyboardType="phone" formControlName="phone"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Address" class="label font-weight-bold m-b-5" ></Label>
+                    <TextField class="input"required formControlName="address"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+
+                <Button style="background-color:#2859d5; color: white;"   text="Register"  (tap)="createAccount()" ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</GridLayout>
